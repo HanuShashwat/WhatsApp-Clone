@@ -1,10 +1,24 @@
 const info = [
   {
-    'name': 'Rivaan Ranawat',
+    'name': 'Hanu Shashwat',
     'message': 'Hey, how are you doing?',
     'time': '3:53 pm',
     'profilePic':
     'https://upload.wikimedia.org/wikipedia/commons/8/85/Elon_Musk_Royal_Society_%28crop1%29.jpg',
+  },
+  {
+    'name': 'Abhijeet Singh',
+    'message': 'Wanna meet?',
+    'time': '3:53 pm',
+    'profilePic':
+    'https://upload.wikimedia.org/wikipedia/commons/e/ef/My_Baby_With_a_Smile-The_Random_Click.jpg',
+  },
+  {
+    'name': 'Eklak Alam',
+    'message': "Let's work on the website!",
+    'time': '3:53 pm',
+    'profilePic':
+    'https://upload.wikimedia.org/wikipedia/commons/2/2e/Baby.jpg',
   },
   {
     'name': 'John Doe',
