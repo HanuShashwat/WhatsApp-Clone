@@ -3,7 +3,7 @@ import 'package:whatsapp_clone/responsive/responsive_layout.dart';
 import 'package:whatsapp_clone/screens/mobile_screen_layout.dart';
 import 'package:whatsapp_clone/screens/web_screen_layout.dart';
 
-import 'colors.dart';
+import 'widgets/colors.dart';
 
 void main() {
   runApp(const MyApp());
