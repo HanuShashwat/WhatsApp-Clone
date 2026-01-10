@@ -86,9 +86,9 @@ const info = [
 ];
 
 const messages = [
-  {"isMe": false, "text": "Hey What is up with you!!", "time": "10:00 am"},
-  {"isMe": true, "text": "im fine,wbu?", "time": "11:00 am"},
-  {"isMe": false, "text": "I am great man!", "time": "11:01 am"},
+  {"isMe": false, "text": "Hey, how are you doing?", "time": "10:00 am"},
+  {"isMe": true, "text": "Nothing,wbu?", "time": "11:00 am"},
+  {"isMe": false, "text": "Do you have some time?", "time": "11:01 am"},
   {
     "isMe": false,
     "text": "Just messaged cuz I had some work.",
@@ -97,17 +97,17 @@ const messages = [
   {"isMe": true, "text": "Obviously, say", "time": "11:03 am"},
   {
     "isMe": false,
-    "text": "haha I wanted you to check out my new channel ^^",
+    "text": "haha I wanted you to check out my new website ^^",
     "time": "11:04 am"
   },
   {
     "isMe": true,
-    "text": " Sure, what is the channel name?",
+    "text": " Sure, what is the website domain?",
     "time": "11:05 am"
   },
   {
     "isMe": false,
-    "text": "Rivaan Ranawat",
+    "text": "Gaprio.in",
     "time": "11:06 am",
   },
   {
@@ -120,7 +120,7 @@ const messages = [
   {"isMe": false, "text": "Thanks bro!", "time": "11:17 am"},
   {
     "isMe": false,
-    "text": "Did you subscribe?",
+    "text": "Did you joined the waitlist?",
     "time": "11:16 am"
   },
   {
@@ -130,17 +130,17 @@ const messages = [
   },
   {
     "isMe": false,
-    "text": "Cool, did you like the content?",
+    "text": "Cool, did you like the design?",
     "time": "11:18 am",
   },
   {
     "isMe": true,
-    "text": "I loved it?",
+    "text": "I loved it!",
     "time": "11:19 am",
   },
   {
     "isMe": false,
-    "text": "OMG! Woah! Thanks!",
+    "text": "Woah! Thanks!",
     "time": "11:20 am",
   },
 ];
