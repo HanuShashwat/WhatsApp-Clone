@@ -57,6 +57,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 height: 5
             ),
             Row(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 if (country != null)
                 Text('+${country!.phoneCode}'),

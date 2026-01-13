@@ -1,13 +1,21 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:whatsapp_clone/auth/login_screen.dart';
+import 'package:whatsapp_clone/auth/screen/login_screen.dart';
 import 'package:whatsapp_clone/common/error.dart';
+import 'auth/screen/otp_screen.dart';
 
 Route<dynamic> generateRoute(RouteSettings settings) {
   switch(settings.name) {
     case LoginScreen.RouteName:
       return MaterialPageRoute(
         builder: (context) => const LoginScreen(),
+      );
+    case OtpScreen.routeName:
+      final verificationId = settings.arguments as String;
+      return MaterialPageRoute(
+        builder: (context) => OtpScreen(
+          verificationId: verificationId,
+        ),
       );
     default:
       return MaterialPageRoute(
