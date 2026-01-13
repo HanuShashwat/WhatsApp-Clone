@@ -4,6 +4,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:whatsapp_clone/auth/screen/otp_screen.dart';
+import 'package:whatsapp_clone/auth/screen/user_info_screen.dart';
 import 'package:whatsapp_clone/common/utils/utils.dart';
 
 final authRepositoryProvider = Provider(
@@ -35,6 +36,29 @@ class AuthRepository {
       }), codeAutoRetrievalTimeout: (String verificationId) {},
       );
     } on FirebaseAuthException catch (e) {
+      showSnackBar(context: context, content: e.message!);
+    }
+  }
+  void verifyOTP({
+    required BuildContext context,
+    required String verificationId,
+    required String userOTP,
+  }) async {
+    try {
+      print('Verifying OTP: $userOTP');
+      PhoneAuthCredential credential = PhoneAuthProvider.credential(
+          verificationId: verificationId,
+          smsCode: userOTP
+      );
+      await auth.signInWithCredential(credential);
+      print('OTP verification successful!');
+      Navigator.pushNamedAndRemoveUntil(
+          context,
+          UserInfoScreen.routeName,
+          (route) => false
+      );
+    } on FirebaseAuthException catch(e) {
+      print('Error verifying OTP: ${e.toString()}');
       showSnackBar(context: context, content: e.message!);
     }
   }
