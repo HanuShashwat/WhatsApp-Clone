@@ -1,6 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:whatsapp_clone/auth/screen/user_info_screen.dart';
 import 'package:whatsapp_clone/router.dart';
 import 'auth/landing/landing_screen.dart';
 import 'firebase_options.dart';
@@ -34,6 +35,7 @@ class MyApp extends StatelessWidget {
       ),
       onGenerateRoute: (settings) => generateRoute(settings),
       home: const LandingScreen()
+      //   home: const UserInfoScreen()
     );
   }
 }

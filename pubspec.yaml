@@ -33,6 +33,7 @@ dependencies:
   firebase_core: ^2.31.0
   country_picker: ^2.0.25
   flutter_riverpod: ^2.5.1
+  image_picker: ^1.2.1
 
 
   # The following adds the Cupertino Icons font to your application.

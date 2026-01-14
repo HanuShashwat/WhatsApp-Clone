@@ -1,8 +1,7 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:whatsapp_clone/auth/screen/login_screen.dart';
 import 'package:whatsapp_clone/auth/screen/user_info_screen.dart';
-import 'package:whatsapp_clone/common/error.dart';
+import 'package:whatsapp_clone/common/widgets/error.dart';
 import 'auth/screen/otp_screen.dart';
 
 Route<dynamic> generateRoute(RouteSettings settings) {
