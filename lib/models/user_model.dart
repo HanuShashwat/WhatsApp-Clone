@@ -7,14 +7,14 @@ class UserModel {
   final String profilePic;
   final bool isOnline;
   final String phoneNumber;
-  final List<String> groupId;
+  // final List<String> groupId;
   UserModel({
     required this.name,
     required this.uid,
     required this.profilePic,
     required this.isOnline,
     required this.phoneNumber,
-    required this.groupId,
+    // required this.groupId,
   });
 
 
@@ -25,7 +25,7 @@ class UserModel {
       'profilePic': profilePic,
       'isOnline': isOnline,
       'phoneNumber': phoneNumber,
-      'groupId': groupId,
+      // 'groupId': groupId,
     };
   }
 
@@ -36,7 +36,7 @@ class UserModel {
       profilePic: map['profilePic'] as String,
       isOnline: map['isOnline'] as bool,
       phoneNumber: map['phoneNumber'] as String,
-      groupId: List<String>.from((map['groupId'] as List<String>),),
+      // groupId: List<String>.from((map['groupId'] as List<String>),),
     );
   }
 }
