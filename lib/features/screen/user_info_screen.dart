@@ -1,17 +1,19 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:whatsapp_clone/common/utils/utils.dart';
+import 'package:whatsapp_clone/features/auth/controller/auth_controller.dart';
 import 'package:whatsapp_clone/widgets/colors.dart';
 
-class UserInfoScreen extends StatefulWidget {
+class UserInfoScreen extends ConsumerStatefulWidget {
   static const String routeName = '/user-information';
   const UserInfoScreen({super.key});
 
   @override
-  State<UserInfoScreen> createState() => _UserInfoScreenState();
+  ConsumerState<UserInfoScreen> createState() => _UserInfoScreenState();
 }
 
-class _UserInfoScreenState extends State<UserInfoScreen> {
+class _UserInfoScreenState extends ConsumerState<UserInfoScreen> {
   final TextEditingController nameController = TextEditingController();
   File? image;
 
@@ -28,6 +30,18 @@ class _UserInfoScreenState extends State<UserInfoScreen> {
     });
   }
 
+  void storeUserData() async {
+    String name = nameController.text.trim();
+
+    if (name.isNotEmpty) {
+      ref.read(authControllerProvider).saveUserDataToFirebase(
+        context,
+        name,
+        image,
+      );
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
@@ -41,7 +55,9 @@ class _UserInfoScreenState extends State<UserInfoScreen> {
                 children: [
                   image == null ? CircleAvatar(
                     radius: 64,
-                    backgroundImage: NetworkImage('https://png.pngitem.com/pimgs/s/649-6490124_katie-notopoulos-katienotopoulos-i-write-about-tech-round.png'),
+                    backgroundImage: NetworkImage(
+                        'https://png.pngitem.com/pimgs/s/649-6490124_katie-notopoulos-katienotopoulos-i-write-about-tech-round.png',
+                    ),
                     backgroundColor: greyColor,
                   ) : CircleAvatar(
                     radius: 64,
@@ -69,7 +85,10 @@ class _UserInfoScreenState extends State<UserInfoScreen> {
                       ),
                     ),
                   ),
-                  IconButton(onPressed: () {}, icon: Icon(Icons.done))
+                  IconButton(
+                    onPressed: storeUserData,
+                    icon: Icon(Icons.done),
+                  ),
                 ],
               )
             ],
